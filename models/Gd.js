@@ -11,8 +11,13 @@ const gdSchema = new mongoose.Schema({
     require: true,
     maxlength: [40, 'Name cannot be more than 40 characters'],
   },
-  picture: {
-    type: ArrayBuffer,
+  identificationTtype: {
+    type: String,
+    require: true,
+  },
+  identificationNumber: {
+    type: String,
+    require: true,
   },
   place: {
     type: String,
