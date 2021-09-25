@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Form from '../components/Form'
 import Link from 'next/link'
+import GeneralDiary from './GeneralDiary/GeneralDiary'
 
 export default function Home({ isConnected }) {
   return (
@@ -15,7 +16,8 @@ export default function Home({ isConnected }) {
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
       </Head>
       <Header />
-      <section className="relative  bg-blueGray-50">
+      <GeneralDiary />
+      {/*<section className="relative  bg-blueGray-50">
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div className="absolute top-0 w-full h-full bg-center bg-cover" id={styles.banner}>
             <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
@@ -46,7 +48,7 @@ export default function Home({ isConnected }) {
       <section className="pb-10 bg-blueGray-200 -mt-24">
         <div className="container mx-auto px-4" />
         <div className="flex flex-wrap">
-          <Link href="/" >
+          <Link href="/generalDiary" >
             <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center" id={styles.cards}>
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" id={styles.eachCard}>
                 <div className="px-4 py-5 flex-auto">
@@ -78,7 +80,7 @@ export default function Home({ isConnected }) {
               </div>
             </div>
           </Link>
-          <Link href="/">
+          <Link href="/GeneralDiary">
             <div className="pt-6 w-full md:w-4/12 px-4 text-center" id={styles.cards}>
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg" id={styles.eachCard}>
                 <div className="px-4 py-5 flex-auto">
@@ -286,7 +288,7 @@ export default function Home({ isConnected }) {
             </div>
           </div>
         </div>
-      </section>
+  </section>*/}
       <Footer />
     </>
   )
