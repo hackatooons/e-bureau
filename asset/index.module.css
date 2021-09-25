@@ -1,0 +1,7 @@
+#banner {
+  background-image: url(./banner.jpg);
+}
+
+#cards:hover {
+  transform: translateY(4px);
+}
