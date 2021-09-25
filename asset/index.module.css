@@ -5,3 +5,9 @@
 #cards:hover {
   transform: translateY(4px);
 }
+
+#eachCard:hover {
+  border: 3px solid grey;
+  border-radius: 20px;
+  background-color: transparent;
+}
