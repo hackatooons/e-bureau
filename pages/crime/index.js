@@ -9,6 +9,9 @@ const generalDiary = () => {
       <Header />
       <div className="font-sans">
         <div className="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 ">
+          <h1 className="text-gray-800 block text-3xl font-extrabold font-title py-4">
+            Crime Report
+          </h1>
           <div className="relative sm:max-w-sm w-full">
             <div className="card shadow-lg  w-full h-full rounded-3xl absolute  transform -rotate-9"></div>
             <div className="card shadow-lg  w-full h-full rounded-3xl absolute  transform rotate-9"></div>
