@@ -3,9 +3,11 @@ import { useState } from 'react'
 import Form from '../../components/Form'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { useRouter } from 'next/router'
 
 const Complain = () => {
   const title = 'Report a crime'
+  const router = useRouter()
   const [victimName, setVictimName] = useState('')
   const [suspectName, setSuspectName] = useState('')
   const [crimeType, setCrimeType] = useState('')
@@ -20,19 +22,20 @@ const Complain = () => {
       descr,
       place,
     }
-    try {
-      fetch(`/api/crime/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-        referrerPolicy: 'no-referrer',
-      })
-    } catch (e) {
-      console.error(e)
-    }
+
+    const res = await fetch(`/api/crime/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+      referrerPolicy: 'no-referrer',
+    })
+    const json = await res.json()
+    router.push(`/ack/${json.data._id}`)
   }
+
+
   const fields = [
     {
       name: 'Victim Name',
