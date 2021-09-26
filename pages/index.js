@@ -4,19 +4,14 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Form from '../components/Form'
 import Link from 'next/link'
-import GeneralDiary from './GeneralDiary/GeneralDiary'
 
-export default function Home({ isConnected }) {
+export default function Home() {
   return (
     <>
       <Head>
         <title>E-bureau</title>
-        <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css" />
-        <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
       </Head>
       <Header />
-      <GeneralDiary />
       {/*<section className="relative  bg-blueGray-50">
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div className="absolute top-0 w-full h-full bg-center bg-cover" id={styles.banner}>
