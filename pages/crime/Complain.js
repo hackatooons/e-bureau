@@ -9,10 +9,29 @@ const Complain = () => {
   const [victimName, setVictimName] = useState('')
   const [suspectName, setSuspectName] = useState('')
   const [crimeType, setCrimeType] = useState('')
-  const [description, setDescription] = useState('')
+  const [place, setPlace] = useState('')
+  const [descr, setDescr] = useState('')
 
-  function myFunction() {
-    console.log('HelloWorld')
+  async function addCrime() {
+    const payload = {
+      victim: victimName,
+      suspect: suspectName,
+      crimeType,
+      descr,
+      place,
+    }
+    try {
+      fetch(`/api/crime/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+        referrerPolicy: 'no-referrer',
+      })
+    } catch (e) {
+      console.error(e)
+    }
   }
   const fields = [
     {
@@ -37,17 +56,24 @@ const Complain = () => {
       handler: setCrimeType,
     },
     {
+      name: 'Place',
+      type: 'text',
+      hintText: 'Place',
+      value: place,
+      handler: setPlace,
+    },
+    {
       name: 'Description',
       type: 'text',
       hintText: 'Description',
-      value: description,
-      handler: setDescription,
+      value: descr,
+      handler: setDescr,
     },
   ]
   return (
     <>
       <Header />
-      <Form title={title} fields={fields} onsubmit={myFunction} />
+      <Form title={title} fields={fields} onsubmit={addCrime} />
       <Footer />
     </>
   )
