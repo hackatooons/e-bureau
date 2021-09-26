@@ -106,7 +106,7 @@ export default function Home() {
                 <img alt="..." src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" className="w-full align-middle rounded-t-lg" />
                 <blockquote className="relative p-8 mb-4">
                   <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" className="absolute left-0 w-full block h-95-px -top-94-px">
-                    <polygon points="-30,95 583,95 583,65" className="text-green-700 fill-current"></polygon>
+                    <polygon points="-30,95 583,95 583,65" className="text-green-600 fill-current"></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
                     Design specially to manage crime in a more efficient way
@@ -199,35 +199,37 @@ export default function Home() {
                 <i className="fas fa-user-friends text-xl"></i>
               </div>
               <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                Working with us is a pleasure
+                The Duties of the Citizen
               </h3>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
+                Every citizen is expected to inform the Police about the commission or likely commission of a cognizable offence.
+                They are legally bound to follow reasonable directions given by a Police Officer/Policeman in Uniform.
+                Sheltering of proclaimed offenders is a serious offence.
               </p>
               <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
+                The citizen is supposed to render necessary assistance to the Police
+                in the discharge of their lawful duties.
+                All enlightened citizens must help in maintaining a pollution free environment.
               </p>
-              <a href="../index.html" className="font-bold text-blueGray-700 mt-8">Check Notus JS!</a>
             </div>
             <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-              <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-2 shadow-lg rounded-lg bg-pink-500">
-                <img alt="..." src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80" className="w-full align-middle rounded-t-lg" />
+              <div className="relative flex flex-col min-w-0 break-words w-full mb-2 shadow-lg rounded-lg bg-green-700">
+                <img alt="..." src="https://user-images.githubusercontent.com/70858557/134803954-9832e9f7-4183-4405-9c76-cbac80ee5b5b.jpg" className="w-full align-middle rounded-t-lg" />
                 <blockquote className="relative p-8 mb-4">
                   <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" className="absolute left-0 w-full block h-95-px -top-94-px">
-                    <polygon points="-30,95 583,95 583,65" className="text-pink-500 fill-current"></polygon>
+                    <polygon points="-30,95 583,95 583,65" className="text-green-600 fill-current"></polygon>
                   </svg>
 
                   <h4 className="text-xl font-bold text-white">
-                    Top Notch Services
+
                   </h4>
                   <p className="text-md font-light mt-2 text-white">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
+                    In public
+                    transport If someone harasses you, don't be embarrassed. Look for help around you.
+                    If you are travelling and you lose your fare money or ticket, speak to the driver and explain.
+                    Also, Carry some identification on you to prove that you are genuine.
+                    If someone tries to Rob you, Report the crime to the police. Try to describe the attacker accurately.
+                    Your actions can help prevent others from becoming victims.
                   </p>
                 </blockquote>
               </div>
@@ -239,28 +241,23 @@ export default function Home() {
       <section className="relative pt-12 bg-blueGray-50">
         <div className="items-center flex flex-wrap">
           <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-            <img alt="..." className="max-w-full rounded-lg shadow-lg" src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" />
+            <img alt="..." className="max-w-full rounded-lg shadow-lg" src="https://user-images.githubusercontent.com/70858557/134804846-0a3acae0-2dd8-401f-a526-d308083a5726.jpg" id={styles.cyberImg} />
           </div>
           <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
             <div className="md:pr-12">
-              <div className="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300 mt-8">
-                <i className="fas fa-rocket text-xl"></i>
+              <div className="text-green-700 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-green-300 mt-8">
+                <i className="fas fa-laptop text-xl"></i>
               </div>
-              <h3 className="text-3xl font-semibold">A growing company</h3>
-              <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-                The extension comes with three pre-built pages to help you get
-                started faster. You can change the text and images and you're
-                good to go.
-              </p>
+              <h3 className="text-3xl font-semibold">Cyber Crime Facts and Stats</h3>
               <ul className="list-none mt-6">
                 <li className="py-2">
                   <div className="flex items-center">
                     <div>
-                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i className="fas fa-fingerprint"></i></span>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-700 bg-green-200 mr-3"><i className="fas fa-fingerprint"></i></span>
                     </div>
                     <div>
                       <h4 className="text-blueGray-500">
-                        Carefully crafted components
+                        There is a hacker attack every 39 seconds
                       </h4>
                     </div>
                   </div>
@@ -268,20 +265,48 @@ export default function Home() {
                 <li className="py-2">
                   <div className="flex items-center">
                     <div>
-                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i className="fab fa-html5"></i></span>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-700 bg-green-200  mr-3"><i className="fas fa-fingerprint"></i></span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Amazing page examples</h4>
+                      <h4 className="text-blueGray-500">
+                        95% of breached records came from only three industries in 2016
+                      </h4>
                     </div>
                   </div>
                 </li>
                 <li className="py-2">
                   <div className="flex items-center">
                     <div>
-                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"><i className="far fa-paper-plane"></i></span>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-700 bg-green-200  mr-3"><i className="fas fa-fingerprint"></i></span>
                     </div>
                     <div>
-                      <h4 className="text-blueGray-500">Dynamic components</h4>
+                      <h4 className="text-blueGray-500">
+                        43% of cyber attacks target small business
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li className="py-2">
+                  <div className="flex items-center">
+                    <div>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-700 bg-green-200  mr-3"><i className="fas fa-fingerprint"></i></span>
+                    </div>
+                    <div>
+                      <h4 className="text-blueGray-500">
+                        The global average cost of a data breach is $3.9 million across SMBs
+                      </h4>
+                    </div>
+                  </div>
+                </li>
+                <li className="py-2">
+                  <div className="flex items-center">
+                    <div>
+                      <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-green-700 bg-green-200 mr-3"><i className="fas fa-fingerprint"></i></span>
+                    </div>
+                    <div>
+                      <h4 className="text-blueGray-500">
+                        Human intelligence and comprehension is the best defense against phishing attacks
+                      </h4>
                     </div>
                   </div>
                 </li>
@@ -294,3 +319,4 @@ export default function Home() {
     </>
   )
 }
+
