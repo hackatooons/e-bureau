@@ -7,15 +7,14 @@ const gdSchema = new mongoose.Schema({
     maxlength: [40, 'Name cannot be more than 40 characters'],
   },
   age: {
-    type: String,
-    require: true,
-    maxlength: [40, 'Name cannot be more than 40 characters'],
-  },
-  identificationTtype: {
-    type: String,
+    type: Number,
     require: true,
   },
-  identificationNumber: {
+  idType: {
+    type: String,
+    require: true,
+  },
+  idNumber: {
     type: String,
     require: true,
   },

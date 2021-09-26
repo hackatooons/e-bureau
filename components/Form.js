@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Form = ({ title, fields }) => {
+const Form = ({ title, fields, onsubmit }) => {
   const field = fields
   return (
     <div className="relative font-medium md:h-screen flex items-center content-center">
@@ -13,19 +13,21 @@ const Form = ({ title, fields }) => {
         <div className="w-full max-w-md mr-auto ml-auto mt-4">
           <div className="bg-white shadow-lg rounded-md px-8 py-8 mb-4 ml-auto mr-auto">
             <div className="mb-4">
-              {field.map((item) => (
-                <React.Fragment key={item}>
+              {field.map(({ name, type, hintText, handler, value }) => (
+                <React.Fragment key={name}>
                   <label
                     className="block text-gray-700 text-sm font-medium mb-2"
-                    htmlFor={item}
+                    htmlFor={name}
                   >
-                    {item}
+                    {name}
                   </label>
                   <input
                     className="shadow-sm appearance-none border border-gray-400 rounded w-full py-4 px-3 text-gray-700 text-sm leading-tight focus:outline-none focus:border-indigo-300"
-                    id={item}
-                    type="text"
-                    placeholder="user@example.com"
+                    id={name}
+                    type={type}
+                    placeholder={hintText}
+                    onChange={(e) => handler(e.target.value)}
+                    value={value}
                   />
                 </React.Fragment>
               ))}
@@ -34,6 +36,7 @@ const Form = ({ title, fields }) => {
               <button
                 type="button"
                 className="bg-indigo-500 hover:bg-indigo-600 shadow-lg text-white font-semibold text-sm py-3 px-0 rounded text-center w-full hover:bg-tertiary duration-200 transition-all"
+                onClick={(e) => onsubmit()}
               >
                 Submit
               </button>
