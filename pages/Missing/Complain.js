@@ -3,8 +3,10 @@ import { useState } from 'react'
 import Form from '../../components/Form'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { useRouter } from 'next/router'
 
 const Complain = () => {
+  const router = useRouter()
   async function addReport() {
     const payload = {
       name,
@@ -13,7 +15,7 @@ const Complain = () => {
       descr,
     }
     try {
-      fetch(`/api/missing`, {
+      const res = await fetch(`/api/missing`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -21,6 +23,8 @@ const Complain = () => {
         body: JSON.stringify(payload),
         referrerPolicy: 'no-referrer',
       })
+      const json = await res.json()
+      router.push(`/ack/${json.data._id}`)
     } catch (e) {
       console.error(e)
     }
