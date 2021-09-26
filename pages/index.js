@@ -48,10 +48,6 @@ export default function Home() {
               x="0"
               y="0"
             >
-              <polygon
-                className="text-blueGray-200 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
             </svg>
           </div>
         </div>
@@ -288,10 +284,6 @@ export default function Home() {
                     viewBox="0 0 583 95"
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   >
-                    <polygon
-                      points="-30,95 583,95 583,65"
-                      className="text-green-600 fill-current"
-                    ></polygon>
                   </svg>
 
                   <h4 className="text-xl font-bold text-white"></h4>
