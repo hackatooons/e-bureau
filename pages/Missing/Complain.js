@@ -36,14 +36,14 @@ const Complain = () => {
     {
       name: 'Name',
       type: 'text',
-      hintText: 'Your Name',
+      hintText: "Missing person's Age",
       value: name,
       handler: setName,
     },
     {
       name: 'Age',
       type: 'text',
-      hintText: 'Your age',
+      hintText: "Missing person's age",
       value: age,
       handler: setAge,
     },
