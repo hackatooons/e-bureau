@@ -5,18 +5,6 @@ import Link from 'next/link'
 const Header = () => {
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-      />
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-        rel="stylesheet"
-      />
       <div className=" flex flex-row items-center p-1 justify-between bg-white shadow-xs">
         <div className="ml-8 text-lg text-gray-700 hidden md:flex">
           <Link href="/">E- Bureau</Link>
