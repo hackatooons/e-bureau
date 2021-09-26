@@ -51,12 +51,7 @@ export default function Home() {
               viewBox="0 0 2560 100"
               x="0"
               y="0"
-            >
-              <polygon
-                className="text-blueGray-200 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
+            ></svg>
           </div>
         </div>
       </section>
@@ -166,6 +161,7 @@ export default function Home() {
                     viewBox="0 0 583 95"
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   ></svg>
+
                   <h4 className="text-xl font-bold text-white">
                     Design specially to manage crime in a more efficient way
                   </h4>
