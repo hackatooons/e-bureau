@@ -17,4 +17,5 @@ It provides an environment for all the citizens to get their problems solved. Al
 
 [Video Preview](https://youtu.be/GKvoI8nf254)
 
-<iframe src="https://youtu.be/GKvoI8nf254" title="description"></iframe>
+
+https://user-images.githubusercontent.com/70858557/134819896-6d2e6876-2484-42a0-9753-3e1aaba02d9e.mp4
