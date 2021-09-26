@@ -11,3 +11,7 @@
   border-radius: 20px;
   background-color: transparent;
 }
+
+#bannerText {
+  width: 750px;
+}
