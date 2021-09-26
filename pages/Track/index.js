@@ -11,13 +11,17 @@ const Page = () => {
   const [result, setResult] = useState({})
 
   async function getResult() {
-    try {
-      const res = await fetch(`/api/${caseType}/${searchInput}/`)
-      const json = await res.json()
-      setResult(json)
-      console.log(result)
-    } catch (e) {
-      console.error(e)
+    if (searchInput !== '')
+      try {
+        const res = await fetch(`/api/${caseType}/${searchInput}/`)
+        const json = await res.json()
+        setResult(json)
+        console.log(result)
+      } catch (e) {
+        console.error(e)
+      }
+    else {
+      setResult({})
     }
   }
   return (
@@ -25,10 +29,10 @@ const Page = () => {
       <Header />
       <div className="px-20 mt-40">
         <div className="my-5">
-          <label for="collection" className="text-xl">
+          <label htmlFor="collection" className="text-xl">
             Select Type
           </label>
-          <div class="select">
+          <div className="select">
             <select
               id="collection"
               value={caseType}
@@ -56,7 +60,9 @@ const Page = () => {
             <GrSearchAdvanced />
           </button>
         </div>
-        {JSON.stringify(result, null, '\n')}
+        {Object.keys(result).length === 0 && result.constructor === Object
+          ? null
+          : JSON.stringify(result, null, '\n')}
       </div>
     </>
   )
