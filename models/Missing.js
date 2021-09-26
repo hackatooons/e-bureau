@@ -7,12 +7,9 @@ const missingSchema = new mongoose.Schema({
     maxlength: [40, 'Name cannot be more than 40 characters'],
   },
   age: {
-    type: String,
+    type: Number,
     require: true,
     maxlength: [40, 'Name cannot be more than 40 characters'],
-  },
-  picture: {
-    type: ArrayBuffer,
   },
   place: {
     type: String,
