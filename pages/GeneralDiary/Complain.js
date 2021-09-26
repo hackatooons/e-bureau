@@ -3,8 +3,10 @@ import { useState } from 'react'
 import Form from '../../components/Form'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { useRouter } from 'next/router'
 
 const Complain = () => {
+  const router = useRouter()
   const title = 'General Diary'
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
@@ -22,18 +24,17 @@ const Complain = () => {
       place,
       descr,
     }
-    try {
-      fetch(`/api/gd/`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-        referrerPolicy: 'no-referrer',
-      })
-    } catch (e) {
-      console.error(e)
-    }
+
+    const res = await fetch(`/api/gd/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+      referrerPolicy: 'no-referrer',
+    })
+    const json = await res.json()
+    router.push(`/ack/${json.data._id}`)
   }
   const fields = [
     {
