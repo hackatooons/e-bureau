@@ -4,7 +4,8 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Home()
+{
   return (
     <>
       <Head>
@@ -29,7 +30,7 @@ export default function Home() {
           <div className="container relative mx-auto">
             <div className="items-center flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12" id={styles.bannerText}>
+                <div id={styles.bannerText}>
                   <h1 className="text-white font-semibold text-5xl">
                     Crime Management E-Bureau.
                   </h1>
@@ -97,7 +98,7 @@ export default function Home() {
                 <div className="px-4 py-5 flex-auto">
                   <div
                     className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full "
-                    style={{ backgroundColor: 'rgba(56, 189, 248, 1)' }}
+                    style={{backgroundColor: 'rgba(56, 189, 248, 1)'}}
                   >
                     <i className="fas fa-retweet"></i>
                   </div>
@@ -125,7 +126,7 @@ export default function Home() {
                 <div className="px-4 py-5 flex-auto">
                   <div
                     className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full"
-                    style={{ backgroundColor: ' rgba(52, 211, 153, 1)' }}
+                    style={{backgroundColor: ' rgba(52, 211, 153, 1)'}}
                   >
                     <i className="fas fa-fingerprint"></i>
                   </div>
