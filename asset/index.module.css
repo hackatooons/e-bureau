@@ -2,18 +2,17 @@
   background-image: url(./banner.jpg);
 }
 
-#cards:hover {
-  transform: translateY(4px);
+#cards{
+  transition: 300ms;
+  min-height: 10vh;
 }
 
-#eachCard:hover {
-  border: 3px solid grey;
-  border-radius: 20px;
-  background-color: transparent;
+#cards:hover {
+  transform: translateY(-10px);
 }
+
 
 #bannerText {
-  width: 750px;
 }
 #cyberImg {
   height: 400px;
