@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import { handleSignup } from './handleSignup'
+import { handleSignup } from './asset/handleSignup'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import bcrypt from 'bcryptjs'
@@ -90,9 +90,8 @@ export default function index() {
                   </div>
                   <div className="mt-7">
                     <button
-                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${
-                        loading ? 'opacity-50 cursor-not-allowed' : ''
-                      } `}
+                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                        } `}
                       onClick={handleVerifyClick}
                       disabled={loading}
                     >
@@ -144,9 +143,8 @@ export default function index() {
 
                   <div className="mt-7">
                     <button
-                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${
-                        loading ? 'opacity-50 cursor-not-allowed' : ''
-                      } `}
+                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                        } `}
                       onClick={handleSignupClick}
                       disabled={loading}
                     >
