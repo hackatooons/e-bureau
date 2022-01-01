@@ -1,6 +1,6 @@
 import validator from 'validator';
 import axios from 'axios';
-import { passwordValidator } from '../../../utils/passwordValidator';
+import { passwordValidator } from '../utils/passwordValidator';
 
 
 export const handleSignup = async (state, setState, setHasSentOTP) => {
