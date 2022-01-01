@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../asset/index.module.css'
+import styles from '../asset/css/index.module.css'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Link from 'next/link'
