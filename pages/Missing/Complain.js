@@ -7,6 +7,13 @@ import { useRouter } from 'next/router'
 
 const Complain = () => {
   const router = useRouter()
+
+  const title = 'File a Missing Report'
+  const [name, setName] = useState('')
+  const [age, setAge] = useState('')
+  const [place, setPlace] = useState('')
+  const [descr, setDescr] = useState('')
+
   async function addReport() {
     const payload = {
       name,
@@ -29,12 +36,6 @@ const Complain = () => {
       console.error(e)
     }
   }
-
-  const title = 'File a Missing Report'
-  const [name, setName] = useState('')
-  const [age, setAge] = useState('')
-  const [place, setPlace] = useState('')
-  const [descr, setDescr] = useState('')
 
   const fields = [
     {

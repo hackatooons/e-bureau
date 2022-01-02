@@ -17,7 +17,7 @@ const generalDiary = () => {
             <div className="card shadow-lg  w-full h-full rounded-3xl absolute  transform rotate-9"></div>
             <div className="relative w-full rounded-3xl  px-6 py-4 bg-gray-100 shadow-md">
               <label
-                for=""
+                htmlFor=""
                 className="block mt-3 text-m text-gray-900 text-center font-semibold"
               >
                 POLICE STAFF LOGIN

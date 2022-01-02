@@ -1,0 +1,20 @@
+#banner {
+  background-image: url(../Images/banner.jpg);
+}
+
+#cards{
+  transition: 300ms;
+  min-height: 10vh;
+}
+
+#cards:hover {
+  transform: translateY(-10px);
+}
+
+
+#bannerText {
+}
+#cyberImg {
+  height: 400px;
+  margin-bottom: 50px;
+}
