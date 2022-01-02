@@ -5,7 +5,7 @@ title: "[Feature Title]"
 labels: feature
 ---
 
-<!-- Have you talked to any of the Moderators or Project Admin (Prathima Kadari) before creating this issue? If not, just have a quick discussion and then once approved, create this feature request. -->
+<!-- Have you talked to any of the Moderators or Project Admin before creating this issue? If not, just have a quick discussion and then once approved, create this feature request. -->
 
 **Is your feature request related to a problem? Please describe.**
 
