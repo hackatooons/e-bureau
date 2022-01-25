@@ -32,6 +32,7 @@ const Complain = () => {
       referrerPolicy: 'no-referrer',
     })
     const json = await res.json()
+    console.log(json);
     router.push(`/ack/${json.data._id}`)
   }
 

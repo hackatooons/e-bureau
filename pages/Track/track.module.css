@@ -41,3 +41,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.Record h1{
+  font-size: large;
+}
+
+.Record span {
+  font-size: medium;
+}

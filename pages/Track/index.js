@@ -27,7 +27,7 @@ const Page = () => {
   return (
     <>
       <Header />
-      <div className="px-20 mt-40">
+      <div className="px-20 mt-30">
         <div className="my-5">
           <label htmlFor="collection" className="text-xl">
             Select Type
@@ -60,9 +60,38 @@ const Page = () => {
             <GrSearchAdvanced />
           </button>
         </div>
-        {Object.keys(result).length === 0 && result.constructor === Object
+      </div>
+      <div>
+      {Object.keys(result).length === 0 && result.constructor === Object
           ? null
-          : JSON.stringify(result, null, '\n')}
+          :
+          (
+            <>
+            
+            <div className={styles.Record}>
+              {/* JSON.stringify(result, null, '\n') */}
+
+              <div class="mt-10 py-3">
+                <div class="px-10 mt-10">
+                  <div class="shadow-2xl bg-white rounded-md max-w-4xl mx-auto p-4 space-y-4 shadow-lg">
+                    <h1 class="mb-2 font-semibold">CrimeType:  <span class="font-thin">{result.data.crimeType}</span></h1>
+                    <div class="pt-2">
+                      <h1 class="font-semibold">Description:</h1>
+                      <p class="font-thin mt-2">{result.data.descr}</p>
+                    </div>
+                    <h1 class="border-t mb-2 pt-3 font-semibold">Victim : <span class="font-thin">{result.data.victim}</span></h1>
+                    <h1 class="border-t mb-2 pt-3 font-semibold">Suspect: 
+                      <span class="font-thin">{result.data.suspect}</span>
+                    </h1>
+                    <h1 class="border-t mb-2 pt-3 font-semibold">Place: <span class="font-thin">{result.data.place}</span></h1>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+          )
+          }
       </div>
     </>
   )
