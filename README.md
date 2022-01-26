@@ -54,3 +54,60 @@ https://user-images.githubusercontent.com/70858557/134819896-6d2e6876-2484-42a0-
 </a>
 </div>
 
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Set Up Locally - Front-End
+
+Fork the project
+
+
+
+Clone the project
+
+```bash
+  git clone https://github.com/geekymeeky/e-bureau.git
+```
+
+Go to the project directory
+
+```bash
+  cd e-bureau
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+
+## Set Up Locally - Back-End
+
+
+[
+  ```bash
+  Add .env file to root folder of the Project
+```
+
+Now ask the mentor for the credentials and paste that into .env file
+]:<>
+
+
+
+
+
