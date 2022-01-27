@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
@@ -60,7 +59,7 @@ export default function index() {
                     </button>       
          <br/>
          <br/>
-        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}> Not registered yet? Register&nbsp; <Link href='../signup'> here </Link></div>
+        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}> Not registered yet? Register&nbsp;<a href= "#" > here </a> </div>
     </form>
     </div>
   </div>
