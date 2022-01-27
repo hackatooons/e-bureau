@@ -98,14 +98,12 @@ Start the server
 
 ## Set Up Locally - Back-End
 
-
-[
   ```bash
   Add .env file to root folder of the Project
 ```
 
-Now ask the mentor for the credentials and paste that into .env file
-]:<>
+Now ask the mentor for the credentials and paste that into the .env file
+
 
 
 
