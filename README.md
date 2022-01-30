@@ -35,6 +35,59 @@ https://user-images.githubusercontent.com/70858557/134819896-6d2e6876-2484-42a0-
 
 <br>
 
+
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Set Up Locally - Front-End
+
+Fork the project
+
+
+
+Clone the project
+
+```bash
+  git clone https://github.com/geekymeeky/e-bureau.git
+```
+
+Go to the project directory
+
+```bash
+  cd e-bureau
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+
+## Set Up Locally - Back-End
+
+  ```bash
+  Add .env file to root folder of the Project
+```
+
+Now ask the mentor for the credentials and paste that into the .env file
+
+<br>
+
 <div align="center">
 <a href="https://github.com/geekymeeky/e-bureau/graphs/contributors"><img src="https://img.shields.io/github/contributors/geekymeeky/e-bureau?color=brightgreen"></a>
 <a href="https://github.com/geekymeeky/e-bureau/stargazers"><img src="https://img.shields.io/github/stars/geekymeeky/e-bureau?color=0059b3"></a>
@@ -53,4 +106,3 @@ https://user-images.githubusercontent.com/70858557/134819896-6d2e6876-2484-42a0-
   <img src = "https://contrib.rocks/image?repo=geekymeeky/e-bureau"/>
 </a>
 </div>
-
