@@ -6,6 +6,8 @@ import axios from 'axios'
 
 const ContactUs = () => {
 
+    const router = useRouter()
+
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
@@ -24,8 +26,10 @@ const ContactUs = () => {
             })
             if (rsp.data.data === 'contact success') {
               alert("Thanks For Contacting, we'll get back to you super soon !!!");
-              return;
             }
+
+            setEmail(" ");
+            setMessage(" ");
           } catch (error) {
             alert('An error occurred')
             console.log(error)
@@ -37,6 +41,7 @@ const ContactUs = () => {
     return (
         <>
             <Header />
+            
             <div className=" min-h-screen bg-slate-200 py-6 flex flex-col justify-center relative overflow-hidden sm:py-12">
                     <span className="border text-4xl text-yellow-800 px-6 pt-10 pb-8 bg-white w-1/2 max-w-md mx-auto rounded-t-md sm:px-10">Contact Us</span>
             <div className="border relative px-4 pt-7 pb-8 bg-white shadow-xl w-1/2 max-w-md mx-auto sm:px-10 rounded-b-md">

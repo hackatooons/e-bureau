@@ -106,9 +106,3 @@ Now ask the mentor for the credentials and paste that into the .env file
   <img src = "https://contrib.rocks/image?repo=geekymeeky/e-bureau"/>
 </a>
 </div>
-
-
-
-
-
-
