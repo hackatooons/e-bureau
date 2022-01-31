@@ -126,14 +126,16 @@ const Footer = () => {
                         Privacy Policy
                       </a>
                     </li>
-                    <li>
-                      <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href=""
-                      >
-                        Contact Us
-                      </a>
-                    </li>
+                    <Link href="/contactUs">
+                      <li>
+                        <a
+                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          href=""
+                        >
+                          Contact Us
+                        </a>
+                      </li>
+                    </Link>
                   </ul>
                 </div>
               </div>
