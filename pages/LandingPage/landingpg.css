@@ -1,39 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Mochiy+Pop+P+One&family=Patrick+Hand&family=Satisfy&display=swap');
-
-#banner {
-  background-image: url(./banner.jpg);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-#cards:hover {
-  transform: translateY(4px);
-}
-
-#eachCard:hover {
-  border: 3px solid grey;
-  border-radius: 20px;
-  background-color: transparent;
-}
-
-#bannerText {
-  width: 750px;
-}
-#cyberImg {
-  height: 400px;
-  margin-bottom: 50px;
-}
-
-/* landing page css */
 
 .outerdiv {
-  width: 100%;
-  height: 100vh;
+  width: 98%;
+  height: 68vh;
   position: relative;
-  margin-top: -18%;
+  margin-top: 0%;
   /* display: flex; */
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, #000000 0%, #07253a 100%);
-  /* font-family: 'Mochiy Pop P One', sans-serif; */
+  font-family: 'Mochiy Pop P One', sans-serif;
 }
 .bubbles {
   position: absolute;
@@ -227,14 +208,12 @@
   text-align: center;
   font-size: 40px;
   color: aliceblue;
-  font-family: 'Mochiy Pop P One', sans-serif;
 }
 .headingsec {
   margin-top: 18%;
   margin-left: -31%;
   text-align: center;
   font-size: 30px;
-  padding-top: 15%;
   color: aliceblue;
   /* font-family: "Satisfy", cursive; */
   /* font-family: "Mochiy Pop P One", sans-serif; */
@@ -294,9 +273,9 @@
 .secondBtn:hover {
   background-color: aliceblue;
 }
-/* .hackerimg {
+.hackerimg {
   width: 30rem;
   display: inline-block;
   margin-left: 65%;
   margin-top: -45%;
-} */
+}
