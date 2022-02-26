@@ -46,7 +46,7 @@ function page() {
         className={styles.hackerimg}
         alt=""
       />
-      <section className=" bg-blueGray-200 mt-12">
+      <section className=" bg-transparent-200 mt-12 ">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -55,22 +55,22 @@ function page() {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap items-center mt-16">
+        <div className="flex flex-wrap items-center mt-16 ">
           <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
             <div className="text-gray-800 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
               <i className="fas fa-user-friends text-xl"></i>
             </div>
-            <h3 className="text-3xl mb-2 font-semibold leading-normal">
+            <h3 className=" text-white text-3xl mb-2 font-semibold leading-normal">
               The Duties of the Citizen
             </h3>
-            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600">
+            <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
               Every citizen is expected to inform the Police about the
               commission or likely commission of a cognizable offence. They
               are legally bound to follow reasonable directions given by a
               Police Officer/Policeman in Uniform. Sheltering of proclaimed
               offenders is a serious offence.
             </p>
-            <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-blueGray-600">
+            <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-white">
               The citizen is supposed to render necessary assistance to the
               Police in the discharge of their lawful duties. All enlightened
               citizens must help in maintaining a pollution free environment.
@@ -108,7 +108,7 @@ function page() {
         </div>
       </div>
       </section>
-      <section className="relative pt-12 bg-blueGray-50">
+      <section className="relative pt-12 bg-transparent-50">
       <div className="items-center flex flex-wrap">
         <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
           <img
@@ -123,7 +123,7 @@ function page() {
             <div className="text-green-700 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-green-300 mt-8">
               <i className="fas fa-laptop text-xl"></i>
             </div>
-            <h3 className="text-3xl font-semibold">
+            <h3 className=" text-white text-3xl font-semibold">
               Cyber Crime Facts and Stats
             </h3>
             <ul className="list-none mt-6">
@@ -135,7 +135,7 @@ function page() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-gray-800">
+                    <h4 className="text-white">
                       There is a hacker attack every 39 seconds
                     </h4>
                   </div>
@@ -149,7 +149,7 @@ function page() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-gray-800">
+                    <h4 className="text-white">
                       95% of breached records came from only three industries
                       in 2016
                     </h4>
@@ -164,7 +164,7 @@ function page() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-gray-800">
+                    <h4 className="text-white">
                       43% of cyber attacks target small business
                     </h4>
                   </div>
@@ -178,7 +178,7 @@ function page() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-gray-800">
+                    <h4 className="text-white">
                       The global average cost of a data breach is $3.9 million
                       across SMBs
                     </h4>
@@ -193,7 +193,7 @@ function page() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-gray-800">
+                    <h4 className="text-white">
                       Human intelligence and comprehension is the best defense
                       against phishing attacks
                     </h4>
