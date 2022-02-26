@@ -18,14 +18,14 @@ const Footer = () => {
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         rel="stylesheet"
       />
-      <footer className="relative bg-blueGray-200 pt-8 pb-6">
+      <footer className="relative  pt-8 pb-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap text-left lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl fonat-semibold text-blueGray-700">
+              <h4 className="text-3xl fonat-semibold text-white">
                 Let's us together bring change!
               </h4>
-              <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
+              <h5 className="text-lg mt-0 mb-2 text-white">
                 File complain, track using tracking Id. Then sit back and relax,
                 let the police Officers solve the problem.
               </h5>
@@ -53,13 +53,13 @@ const Footer = () => {
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase text-blueGray-800 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Useful Links
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href=""
                       >
                         About Us
@@ -68,7 +68,7 @@ const Footer = () => {
                     <Link href="/GeneralDiary">
                       <li>
                         <a
-                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                           href=""
                         >
                           General Diary
@@ -78,7 +78,7 @@ const Footer = () => {
                     <Link href="/Missing">
                       <li>
                         <a
-                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                           href=""
                         >
                           Missing Report
@@ -88,7 +88,7 @@ const Footer = () => {
                     <Link href="/crime">
                       <li>
                         <a
-                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                           href=""
                         >
                           Crime Report
@@ -98,13 +98,13 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-blueGray-800 text-sm font-semibold mb-2">
+                  <span className="block uppercase text-white text-sm font-semibold mb-2">
                     Other Links
                   </span>
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href=""
                       >
                         License
@@ -112,7 +112,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href=""
                       >
                         Terms &amp; Conditions
@@ -120,7 +120,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                         href=""
                       >
                         Privacy Policy
@@ -129,7 +129,7 @@ const Footer = () => {
                     <Link href="/contactUs">
                       <li>
                         <a
-                          className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
                           href=""
                         >
                           Contact Us
@@ -144,17 +144,17 @@ const Footer = () => {
           <hr className="my-6 border-blueGray-300" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-blueGray-500 font-semibold py-1">
+              <div className="text-sm text-white font-semibold py-1">
                 Copyright © <span id="get-current-year">2021</span>
                 <a
                   href=""
-                  className="text-blueGray-500 hover:text-gray-800"
+                  className="text-white hover:text-gray-800"
                   target="_blank"
                 />{' '}
                 all rights
                 <a
                   href=""
-                  className="text-blueGray-500 hover:text-blueGray-800"
+                  className="text-white hover:text-blueGray-800"
                 >
                   {' '}
                   reserved
