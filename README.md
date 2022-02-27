@@ -1,39 +1,35 @@
-<h1 align="center">E-Bureau </h1>
+<h1 align="center">E-Bureau 👨‍✈️ </h1>
 <br>
 <p align="center">
   
 
-
-E- platform used by both public and police for making Crime Management easier. This includes general diary, crime reports and reporting of missing person.
+E- platform used by both public and police for making Crime Management easier. This includes general diary, crime reports and reporting of missing person. Specially designed to provide equal approach to everyone. So that everyone is heard and provided quality service at time.
 <br>
+  
+  <p align="center">
+	<i><b>You can check the project here</b></i><br><br>
+	<a href="e-bureau.vercel.app">
+	    <img src="https://forthebadge.com/images/badges/check-it-out.svg">
+	</a>
+    <br>
+    <br>
 <h2 align="center"> Problem it solves </h2>
 
 It provides an environment for all the citizens to get their problems solved. All the report records can be accessed by the police staff. The user can easily log in and file a complaint of any of the above categories. Also, they can track their record using the unique identification number provided to them after filing complaint.
 </p>
+
+ <h1 align=center> Tech Stack 🔥 </h1>  
+  <p align="center">
+  <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="badge" height="26px" width="90px"/>  <img src="https://badges.aleen42.com/src/node.svg" height="26px" width="90px" /> <img src="https://badges.aleen42.com/src/tailwindcss.svg" height="26px" width="90px"/> <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" height="26px" width="90px" /> <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" height="26px" width="90px"/> <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" height="26px" width="90px"/> <img src="https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black" height="26px" width="90px"/>   <img src="https://badges.aleen42.com/src/github.svg" height="26px" width="90px"/>
+  
 <br>
 <br>
-
-<h2 align="center"> Tech Stack Used </h2>
-
- ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) 
- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
- ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
- ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
- 
- <br>
-
-
-<h2 align="center"> Video Url </h2>
-
-[Video Preview](https://youtu.be/GKvoI8nf254)
-
-<br>
-
-https://user-images.githubusercontent.com/70858557/134819896-6d2e6876-2484-42a0-9753-3e1aaba02d9e.mp4
-
-<br>
+  
+### Open Source Program it has been part of ✨
+<p align="center">
+<img src="https://media-exp1.licdn.com/dms/image/C560BAQGh8hr-FgbrHw/company-logo_200_200/0/1602422883512?e=1654128000&v=beta&t=cn4L1Ij4226o67c9ZOxKfExdyzjxgRdiC4CUE5nSKEI" width=100 height=100>
+<img src="https://media-exp1.licdn.com/dms/image/C510BAQGSObrO0QPlMQ/company-logo_200_200/0/1555704980721?e=1654128000&v=beta&t=RMDFKpN0LKke3gQYwa_yJGs9LqjS0GXKvj2wQEBTfV8" width=100 height=100>
+</p>
 
 
 
@@ -99,10 +95,12 @@ Now ask the mentor for the credentials and paste that into the .env file
 </div>
 <br>
 
-<h2 align="center"> Contributors </h2>
+<h2 align="center">Thanks to the Amazing Contributors 🤩</h2>
 
 <div align="center">
 <a href = "https://github.com/geekymeeky/e-bureau/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=geekymeeky/e-bureau"/>
 </a>
 </div>
+
+  
