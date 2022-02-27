@@ -8,7 +8,7 @@ E- platform used by both public and police for making Crime Management easier. T
   
   <p align="center">
 	<i><b>You can check the project here</b></i><br><br>
-	<a href="e-bureau.vercel.app">
+	<a href="https://e-bureau.vercel.app/">
 	    <img src="https://forthebadge.com/images/badges/check-it-out.svg">
 	</a>
     <br>
