@@ -95,12 +95,17 @@ Now ask the mentor for the credentials and paste that into the .env file
 </div>
 <br>
 
-<h2 align="center">Thanks to the Amazing Contributors 🤩</h2>
-
-<div align="center">
-<a href = "https://github.com/geekymeeky/e-bureau/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=geekymeeky/e-bureau"/>
+<h2 align="center">Thanks go to these Wonderful People 🤩</h2>
+<table align=center>
+	<tr>
+		<td>
+			<a href="https://github.com/geekymeeky/e-bureau/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=geekymeeky/e-bureau" />
 </a>
-</div>
+		</td>
+	</tr>
+</table>
+
+<br>
 
   
