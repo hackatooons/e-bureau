@@ -1,10 +1,14 @@
 import React from "react"
 import styles from '../asset/css/index.module.css'
+import Navbar from "../components/Navbar/Navbar"
 import Footer from '../components/Footer/Footer'
 function page() {
   return (
-
+    
+<>
+  <Navbar />
     <div className={styles.outerdiv}>
+   
       <div className={styles.bubbles}>
         <div className={styles.bubble}></div>
         <div className={styles.bubble}></div>
@@ -22,7 +26,9 @@ function page() {
         <div className={styles.bubble}></div>
         <div className={styles.bubble}></div>
       </div>
+     
       <h6 className={styles.headingsec}>A crime management platform</h6>
+      
       <h3 className={styles.heading}>WELCOME TO E-bureau</h3>
 
       <hr className={styles.horiBarFirst} />
@@ -208,6 +214,7 @@ function page() {
 
 
     </div>
+    </>
   )
 }
 export default page;
