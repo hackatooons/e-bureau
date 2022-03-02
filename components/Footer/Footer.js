@@ -2,11 +2,19 @@ import React from 'react'
 import { IoLogoTwitter } from 'react-icons/io'
 import { FaFacebook, FaGithub } from 'react-icons/fa'
 import Link from 'next/link'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Footer = () => {
   return (
     <>
-      <link
+
+ {/* OLD FOOTER START */}
+
+
+      {/* <link
         rel="stylesheet"
         href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
       />
@@ -164,6 +172,106 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </footer> */}
+
+      {/* OLD FOOTER END  */}
+
+      {/* NEW FOOTER START */}
+
+      <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
+            <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
+                  <div className="mr-12 hidden lg:block">
+                    <span>Get connected with us on social networks:</span>
+                  </div>
+              <div className="flex justify-center">
+
+                  <a href="#!" className="mr-6 text-gray-600">
+                    <InstagramIcon />
+                  </a>
+
+                  <a href="#!" className="mr-6 text-gray-600">
+                      <FacebookIcon />
+                  </a>
+
+                  <a href="#!" className="mr-6 text-gray-600">
+                    <GitHubIcon />
+                  </a>
+
+                  <a href="#!" className="mr-6 text-gray-600">
+                    <TwitterIcon />
+                  </a>
+
+                  
+              </div>
+            </div>
+
+          <div className=" mx-14 py-10 text-center md:text-left">
+            <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-4 gap-24">
+              <div className="">
+                <h6 className="
+                    uppercase
+                    font-semibold
+                    mb-4
+                    flex
+                    items-center
+                    justify-center
+                    md:justify-start
+                  ">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
+                    className="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 47wQbNPTDJp9hMYdvogK2hAUiHsGeiybwaWe36bwtRQ3UTpYV7YuZ8FV5j9nauFCWwcjM6dTzpL5s2N79Rp5unwdMvc8ZKU102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z">
+                    </path>
+                  </svg>
+                  E-Bureau
+                </h6>
+                <p className=''>
+                  Let us together bring the Change <br></br>
+                  File the report, then Sit back and relax, Let Cops do their work for you
+                </p>
+              </div>
+              <div className="">
+                <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                  MORE
+                </h6>
+                <p className="mb-4">
+                  <a href="#!" className="text-gray-600">License</a>
+                </p>
+                <p className="mb-4">
+                  <a href="#!" className="text-gray-600">Terms & Conditions</a>
+                </p>
+                <p className="mb-4">
+                  <a href="#!" className="text-gray-600">Privacy Policy</a>
+                </p>
+                <p>
+                  <a href="#!" className="text-gray-600">ContactUs</a>
+                </p>
+              </div>
+              <div className="">
+                <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                  Useful links
+                </h6>
+                <p className="mb-4">
+                  <a href="#!" className="text-gray-600">About US</a>
+                </p>
+                <p className="mb-4">
+                  <a href="#!" className="text-gray-600">General Diary</a>
+                </p>
+                <p className="mb-4">
+                  <a href="#!" className="text-gray-600">Missing Report</a>
+                </p>
+                <p>
+                  <a href="#!" className="text-gray-600">Crime Report</a>
+                </p>
+              </div>
+              
+            </div>
+          </div>
+          <div className="text-center p-6 bg-gray-200">
+            <span>© 2022 Copyright:</span>
+            <a className="text-gray-600 font-semibold" href="https://tailwind-elements.com/">E-Bureau</a>
+          </div>
       </footer>
     </>
   )
