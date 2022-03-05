@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       {/* header */}
       <div className=" flex flex-row items-center p-1 justify-between bg-black shadow-xs">
-        <div className="ml-8 text-3xl text-white hidden md:flex">
+        <div className="ml-8 text-3xl text-white ">
           <Link href="/">E- Bureau</Link>
         </div>
         <div className="flex flex-row-reverse mr-4 ml-4 md:hidden">
@@ -36,9 +36,9 @@ export default function Home() {
 
       <div className="pt-24 bg-green-500">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-          <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+          <div className="flex flex-col w-full md:w-2/5 justify-center text-center md:text-center">
             <h1 className="my-4 text-5xl font-bold leading-tight">
-              Crime Management <br /> E-Bureau.
+              Crime Management E-Bureau
             </h1>
             <p className="leading-normal text-2xl mb-8">
               This is an E- platform used by both public and police for making
@@ -199,7 +199,7 @@ export default function Home() {
               </a>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="flex items-center justify-center">
+              <div class="flex items-left ">
                 <Link href="/crime">
                   <button class="mx-auto lg:mx-0 hover:underline gradient text-black font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-green-500">
                     Visit
@@ -227,7 +227,7 @@ export default function Home() {
               </a>
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
-              <div class="flex items-center justify-end">
+              <div class="flex items-left">
                 <Link href="/Missing">
                   <button class="mx-auto lg:mx-0 hover:underline gradient text-black font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-green-500">
                     Visit
