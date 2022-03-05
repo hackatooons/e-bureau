@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Mochiy+Pop+P+One&family=Patrick+Hand&family=Satisfy&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Montserrat:wght@400;500&family=Space+Mono:wght@400;700&display=swap');
 #banner {
   background-image: url(../Images/banner.jpg);
 }
@@ -25,15 +25,11 @@
 /* landing page css */
 
 .outerdiv {
-  width: 100%;
-  height: 300vh;
-  position: relative;
-  margin-top: -18%;
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, #000000 0%, #07253a 100%);
-  /* font-family: 'Mochiy Pop P One', sans-serif; */
 }
 .bubbles {
   position: absolute;
@@ -42,7 +38,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
 }
 .bubble {
   width: 25px;
@@ -218,6 +214,18 @@
 
 .content {
   z-index: 2;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headingContainer{
+  display: flex;
+  flex-direction: column;
 }
 
 .heading {
