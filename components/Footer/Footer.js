@@ -1,6 +1,4 @@
 import React from 'react'
-import { IoLogoTwitter } from 'react-icons/io'
-import { FaFacebook, FaGithub } from 'react-icons/fa'
 import Link from 'next/link'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
