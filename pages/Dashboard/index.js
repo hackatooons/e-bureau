@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import styles from '../../asset/css/index.module.css'
+import Header from '../../components/Header/Header'
+import { GiTrenchKnife, GiRobberMask } from 'react-icons/gi'
 import Link from 'next/link'
 
 export default function Home() {
@@ -233,6 +236,52 @@ export default function Home() {
                     Visit
                   </button>
                 </Link>
+<Link href="/postmortem">
+            <div
+              className="pt-6 w-full md:w-4/12 px-4 text-center cursor-pointer"
+              id={styles.cards}
+            >
+              <div
+                className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+                id={styles.eachCard}
+              >
+                <div className="px-4 py-5 flex-auto">
+                  <div
+                    className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-300"
+                  >
+                    <GiTrenchKnife />
+                  </div>
+                  <h6 className="text-xl font-semibold">Post Mortem Report</h6>
+                  <p className="mt-2 mb-4 text-gray-800">
+                    Finding out the precise cause of loss of life is regularly required for coverage claims. Genetic or environmental causes of disorder that may affect others related to the deceased may be discovered through an autopsy. Autopsy aids in finding out missed diagnoses and help in preventing repetition of these scientific errors in destiny instances.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Link>
+          <Link href="/prisoner">
+            <div
+              className="pt-6 w-full md:w-4/12 px-4 text-center cursor-pointer"
+              id={styles.cards}
+            >
+              <div
+                className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+                id={styles.eachCard}
+              >
+                <div className="px-4 py-5 flex-auto">
+                  <div
+                    className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400"
+                  >
+                    <GiRobberMask />
+                  </div>
+                  <h6 className="text-xl font-semibold">Adding Prisoner</h6>
+                  <p className="mt-2 mb-4 text-gray-800">
+                    Adding the prisoner name to the database to keep track
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Link>
               </div>
             </div>
           </div>
