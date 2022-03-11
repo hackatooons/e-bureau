@@ -14,15 +14,15 @@ const Header = () => {
         </div>
         <div className="flex flex-row-reverse mr-8 md:flex">
         <Link href="/signin">
-          <div className="text-white text-center bg-gray-400 px-4 py-2 m-2">
+          <a className="text-white text-center cursor-pointer bg-gray-400 hover:bg-green-600 px-4 py-2 m-2">
             Login
-          </div>
-          </Link>
-          <Link href="/signup">
-            <a className="text-white text-center bg-gray-400 px-4 py-2 m-2">
-              Sign Up
-            </a>
-          </Link>
+          </a>
+        </Link>
+        <Link href="/signup">
+          <a className="text-white text-center cursor-pointer bg-gray-400 hover:bg-green-600 px-4 py-2 m-2">
+            Sign Up
+          </a>
+        </Link>
         </div>
       </div>
     </>
