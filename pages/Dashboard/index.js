@@ -231,11 +231,6 @@ export default function Home() {
             </div>
             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
               <div class="flex items-left">
-                <Link href="/Missing">
-                  <button class="mx-auto lg:mx-0 hover:underline gradient text-black font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-green-500">
-                    Visit
-                  </button>
-                </Link>
 <Link href="/postmortem">
             <div
               className="pt-6 w-full md:w-4/12 px-4 text-center cursor-pointer"
@@ -283,6 +278,11 @@ export default function Home() {
             </div>
           </Link>
               </div>
+              <Link href="/Missing">
+                  <button class="mx-auto lg:mx-0 hover:underline gradient text-black font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out bg-green-500">
+                    Visit
+                  </button>
+                </Link>
             </div>
           </div>
         </div>
