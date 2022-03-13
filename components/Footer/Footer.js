@@ -234,16 +234,24 @@ const Footer = () => {
                   MORE
                 </h6>
                 <p className="mb-4">
-                  <a href="#!" className="text-gray-600">License</a>
+                  <Link href="/">
+                    <a className="text-gray-600">License</a>
+                  </Link>
                 </p>
                 <p className="mb-4">
-                  <a href="#!" className="text-gray-600">Terms & Conditions</a>
+                  <Link href="/">
+                    <a className="text-gray-600">Terms & Conditions</a>
+                  </Link>
                 </p>
                 <p className="mb-4">
-                  <a href="#!" className="text-gray-600">Privacy Policy</a>
+                  <Link href="/">
+                    <a className="text-gray-600">Privacy Policy</a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-gray-600">ContactUs</a>
+                  <Link href="/contactUs">
+                    <a className="text-gray-600">ContactUs</a>
+                  </Link>
                 </p>
               </div>
               <div className="">
@@ -251,24 +259,34 @@ const Footer = () => {
                   Useful links
                 </h6>
                 <p className="mb-4">
-                  <a href="#!" className="text-gray-600">About US</a>
+                  <Link href="/AboutUs">
+                    <a className="text-gray-600">About US</a>
+                    </Link>
                 </p>
                 <p className="mb-4">
-                  <a href="#!" className="text-gray-600">General Diary</a>
+                  <Link href="/GeneralDiary">
+                    <a className="text-gray-600">General Diary</a>
+                  </Link>
                 </p>
                 <p className="mb-4">
-                  <a href="#!" className="text-gray-600">Missing Report</a>
+                  <Link href="/Missing">
+                    <a className="text-gray-600">Missing Report</a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-gray-600">Crime Report</a>
+                  <Link href="/crime">
+                    <a className="text-gray-600">Crime Report</a>
+                  </Link>
                 </p>
               </div>
               
             </div>
           </div>
           <div className="text-center p-6 bg-gray-200">
-            <span>© 2022 Copyright:</span>
-            <a className="text-gray-600 font-semibold" href="https://tailwind-elements.com/">E-Bureau</a>
+            <span>© 2022 Copyright :</span>
+            <Link href="/">
+              <a className="text-gray-600 font-semibold ml-1">E-Bureau</a>
+            </Link>
           </div>
       </footer>
     </>

@@ -59,22 +59,22 @@ const Navbar = () => {
 
             <div className= {`${active ? 'hidden' : ''}  w-full lg:inline-flex lg:flex-grow lg:w-auto`}>
                 <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
-                    <Link href='/'>
+                    <Link href='/AboutUs'>
                         <a className=' lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white '>
                             About Us
                         </a>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/GeneralDiary'>
                         <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white'>
                             Genral diary
                         </a>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/Missing'>
                         <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white'>
                             Missing Report
                         </a>
                     </Link>
-                    <Link href='/'>
+                    <Link href='/crime'>
                         <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white'>
                             Crime Report
                         </a>
