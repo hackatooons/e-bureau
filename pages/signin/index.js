@@ -25,31 +25,19 @@ export default function index() {
               </label>
               
                 <form method="#" action="#" className="mt-10">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Enter Name"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="name"
-                    />
+                  <div className='mt-4'>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                      <input type="text" name="email" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Email"/>
+                    </div>
+                    {/* <strong class="text-red-500 text-xs">Email field is required</strong> */}
                   </div>
-
-                  <div className="mt-7">
-                    <input
-                      type="email"
-                      placeholder="Enter Email"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="email"
-                    />
-                  </div>
-
-                  <div className="mt-7">
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="password"
-                    />
+                  <div className='mt-4'>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                      <input type="password" name="password" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Strong Password"/>
+                    </div>
+                    {/* <strong class="text-red-500 text-xs">Password field is required</strong> */}
                   </div>
                   <br/>
                   <button
