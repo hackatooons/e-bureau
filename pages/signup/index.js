@@ -101,46 +101,34 @@ export default function index() {
                 </form>
               ) : (
                 <form method="#" action="#" className="mt-10">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Enter Name"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="name"
-                      onChange={handleOnChange}
-                    />
+                  <div className='mt-4'>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                      <input type="text" name="name" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Full Name" onChange={handleOnChange}/>
+                    </div>
+                    {/* <strong class="text-red-500 text-xs">Full Name field is required</strong> */}
                   </div>
-
-                  <div className="mt-7">
-                    <input
-                      type="email"
-                      placeholder="Enter Email"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="email"
-                      onChange={handleOnChange}
-                    />
+                  <div className='mt-4'>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                      <input type="email" name="email" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Email" onChange={handleOnChange}/>
+                    </div>
+                    {/* <strong class="text-red-500 text-xs">Email field is required</strong> */}
                   </div>
-
-                  <div className="mt-7">
-                    <input
-                      type="password"
-                      placeholder="Enter Password"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="password"
-                      onChange={handleOnChange}
-                    />
+                  <div className='mt-4'>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Password</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                      <input type="password" name="password" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Password" onChange={handleOnChange}/>
+                    </div>
+                    {/* <strong class="text-red-500 text-xs">Password field is required</strong> */}
                   </div>
-
-                  <div className="mt-7">
-                    <input
-                      type="text"
-                      placeholder="Confirm Password"
-                      className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                      name="confirmPassword"
-                      onChange={handleOnChange}
-                    />
+                  <div className='mt-4'>
+                    <label for="price" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                    <div class="mt-1 relative rounded-md shadow-sm">
+                      <input type="text" name="confirmPassword" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Re-Enter Password" onChange={handleOnChange}/>
+                    </div>
+                    {/* <strong class="text-red-500 text-xs">Please Re-Enter Password</strong> */}
                   </div>
-
                   <div className="mt-7">
                     <button
                       className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${loading ? 'opacity-50 cursor-not-allowed' : ''
