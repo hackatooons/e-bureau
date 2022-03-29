@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../../asset/css/index.module.css'
-import Header from '../../components/Header/Header'
+import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 
 import Link from 'next/link'
@@ -16,7 +16,7 @@ export default function AboutUs()
           href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
         />
       </Head>
-      <Header />
+      <Navbar />
       <section className="relative  bg-blueGray-50">
         <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
           <div
@@ -28,18 +28,18 @@ export default function AboutUs()
               className="w-full h-full absolute opacity-75 bg-black"
             ></span>
           </div>
-          <div className="container relative mx-auto">
-            <div className="items-center flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div className="container flex justify-center  relative ">
+            <div className="items-center justify-center flex flex-wrap">
+              <div className=" px-4 ml-auto mr-auto text-center">
                 <div id={styles.bannerText}>
-                  <h1 className="text-white font-bold text-6xl">
+                  <h1 className="text-green-500 font-Montserrat font-bold text-7xl">
                      About Us
                   </h1>
                   <br/>
-                  <h1 className="text-white font-semibold text-5xl">
-                   Crime Management E-Bureau.
+                  <h1 className="text-white font-Montserrat font-bold text-5xl">
+                   Crime Management <span className='text-green-500'>E-Bureau</span>.
                   </h1>
-                  <p className="mt-6 text-lg text-white text-blueGray-200">
+                  <p className="mt-6 w-1/2 mx-auto text-lg text-white font-space text-blueGray-200">
                     This is an E- platform used by both public and police for
                     making Crime Management easier. This includes general diary,
                     crime reports and reporting of missing person.
@@ -80,10 +80,10 @@ export default function AboutUs()
                     className="absolute left-0 w-full block h-95-px -top-94-px"
                   ></svg>
 
-                  <h4 className="text-xl font-bold text-white">
+                  <h4 className="text-xl font-Montserrat font-bold text-white">
                     Design specially to manage crime in a more efficient way
                   </h4>
-                  <p className="text-md font-light mt-2 text-white">
+                  <p className="text-md font-space pt-2 mt-2 text-white">
                     Providing an enviroment for all the citizens to get their
                     problems solved. All the report records can be accessed by
                     the police staff. The user can easily login and file a
@@ -102,10 +102,10 @@ export default function AboutUs()
                       <div className="text-gray-800 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-handshake"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
+                      <h6 className="text-xl font-Montserrat  mb-1 font-bold ">
                         Compassion and Fairness in approach
                       </h6>
-                      <p className="mb-4 text-gray-800">
+                      <p className="mb-4 font-space pt-2 text-gray-800">
                         Specially designed to provide equal approach to
                         everyone. So that everyone is heard and provided quality
                         service at time.
@@ -117,10 +117,10 @@ export default function AboutUs()
                       <div className="text-gray-800 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-paper-plane"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
+                      <h6 className="text-xl mb-1 font-Montserrat font-bold">
                         Enforce the rule of law impartially and honesty
                       </h6>
-                      <p className="mb-4 text-gray-800">
+                      <p className="mb-4 font-space pt-2 text-gray-800">
                         To follow the rule of impartially and honesty. And
                         ensure others do the same.
                       </p>
@@ -133,10 +133,10 @@ export default function AboutUs()
                       <div className="text-gray-800 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-times"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
+                      <h6 className="text-xl mb-1 font-Montserrat font-bold ">
                         Preventing crime and maintain public order
                       </h6>
-                      <p className="mb-4 text-gray-800">
+                      <p className="mb-4 font-space pt-2 text-gray-800">
                         This platform will help us reduce crime making it a Duty
                         not only for the police, but for each and every citizen.
                       </p>
@@ -147,10 +147,10 @@ export default function AboutUs()
                       <div className="text-gray-800 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white">
                         <i className="fas fa-star"></i>
                       </div>
-                      <h6 className="text-xl mb-1 font-semibold">
+                      <h6 className="text-xl mb-2 font-Montserrat font-bold">
                         Bringing peace, progress with support of community
                       </h6>
-                      <p className="mb-4 text-gray-800">
+                      <p className="mb-4 font-space pt-2 text-gray-800">
                         And finally we all can together bring a change by making
                         our community better and bringing peace all over.
                       </p>
