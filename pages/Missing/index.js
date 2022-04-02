@@ -23,20 +23,31 @@ const generalDiary = () => {
                 POLICE STAFF LOGIN
               </label>
               <form method="#" action="#" className="mt-10">
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Enter Unique Identification No."
-                    className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                  />
+                <div className="mt-4">
+                  <label class="block text-sm font-medium text-gray-700">
+                    Enter Unique Identification No.
+                  </label>
+                  <div class="mt-1 relative rounded-md shadow-sm">
+                    <input
+                      type="email"
+                      class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                      placeholder="Enter Unique Identification No."
+                    />
+                  </div>
+                  {/* <strong class="text-red-500 text-xs">Unique Identification No field is required</strong> */}
                 </div>
-
-                <div className="mt-7">
-                  <input
-                    type="password"
-                    placeholder="Enter Name"
-                    className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                  />
+                <div className="mt-4">
+                  <label class="block text-sm font-medium text-gray-700">
+                    Enter Name
+                  </label>
+                  <div class="mt-1 relative rounded-md shadow-sm">
+                    <input
+                      type="password"
+                      class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                      placeholder="Enter Name"
+                    />
+                  </div>
+                  {/* <strong class="text-red-500 text-xs">Name field is required</strong> */}
                 </div>
 
                 <div className="mt-7">
