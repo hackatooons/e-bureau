@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
+import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Link from 'next/link'
 
 const generalDiary = () => {
   return (
     <>
-      <Header />
+      <Navbar />
       <div className="font-sans">
         <div className="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 ">
           <h1 className="text-gray-800 block text-3xl font-extrabold font-title py-4">
