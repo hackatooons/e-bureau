@@ -1,9 +1,29 @@
 import React,{useState} from 'react'
 import Link from 'next/link';
 import { Transition } from "@headlessui/react";
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+const clientId = "670036797974-nkr717salao78bg4ed7kltb34nmv00pu.apps.googleusercontent.com";
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [showloginButton, setShowloginButton] = useState(true);
+    const [showlogoutButton, setShowlogoutButton] = useState(false);
+    const onLoginSuccess = (res) => {
+        console.log('Login Success:', res.profileObj);
+        setShowloginButton(false);
+        setShowlogoutButton(true);
+    };
+
+    const onLoginFailure = (res) => {
+        console.log('Login Failed:', res);
+    };
+
+    const onSignoutSuccess = () => {
+        alert("You have been logged out successfully");
+        console.clear();
+        setShowloginButton(true);
+        setShowlogoutButton(false);
+    };
 
   return (
     <>
@@ -66,10 +86,28 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <button className="uppercase h-12 text-center w-40 text-white font-Montserrat flex justify-center items-center gap-3 font-semibold rounded bg-blue-500 hover:bg-red-900">
+            {/* <button className="uppercase h-12 text-center w-40 text-white font-Montserrat flex justify-center items-center gap-3 font-semibold rounded bg-blue-500 hover:bg-red-900">
                 <img src="https://www.svgrepo.com/show/303552/google-g-2015-logo.svg" className='w-8'></img>
                 Google
-            </button>
+            </button> */}
+            { showloginButton ?
+                <GoogleLogin
+                    clientId={clientId}
+                    buttonText="Sign In"
+                    onSuccess={onLoginSuccess}
+                    onFailure={onLoginFailure}
+                    cookiePolicy={'single_host_origin'}
+                    isSignedIn={true}
+                /> : null}
+
+            { showlogoutButton ?
+                <GoogleLogout
+                    clientId={clientId}
+                    buttonText="Sign Out"
+                    onLogoutSuccess={onSignoutSuccess}
+                >
+                </GoogleLogout> : null
+            }
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
