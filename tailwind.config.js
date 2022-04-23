@@ -6,7 +6,8 @@ module.exports = {
       fontFamily:{
         bitter: ['Bitter','serif'],
         Montserrat:['Montserrat','san-serif'],
-        space:['Space Mono', 'monospace']
+        space:['Space Mono', 'monospace'],
+        poppins: ['Poppins','san-serif']
       }
     },
     screens:{
