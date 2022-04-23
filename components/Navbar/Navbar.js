@@ -1,11 +1,28 @@
 import React,{useState} from 'react'
 import Link from 'next/link';
+import { Transition } from "@headlessui/react";
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+const clientId = "670036797974-nkr717salao78bg4ed7kltb34nmv00pu.apps.googleusercontent.com";
 const Navbar = () => {
 
-    const [active, setActive] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [showloginButton, setShowloginButton] = useState(true);
+    const [showlogoutButton, setShowlogoutButton] = useState(false);
+    const onLoginSuccess = (res) => {
+        console.log('Login Success:', res.profileObj);
+        setShowloginButton(false);
+        setShowlogoutButton(true);
+    };
 
-    const handleClick = () => {
-    setActive(!active);
+    const onLoginFailure = (res) => {
+        console.log('Login Failed:', res);
+    };
+
+    const onSignoutSuccess = () => {
+        alert("You have been logged out successfully");
+        console.clear();
+        setShowloginButton(true);
+        setShowlogoutButton(false);
     };
 
   return (
@@ -23,65 +40,167 @@ const Navbar = () => {
         rel="stylesheet"
       />
 
+        <nav className="bg-green-500">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <div className="flex-shrink-0 flex justify-center items-center gap-2">
+                <img
+                  className="h-8 w-8"
+                  src="https://www.svgrepo.com/show/16950/building.svg"
+                  alt="Workflow"
+                />
+                <h1 className='text-white text-3xl font-Montserrat font-bold'>E-Bureau</h1>
+              </div>
+              <div className="hidden md:block">
+                <div className="ml-10 flex items-baseline space-x-4">
+                  <a
+                    href="/AboutUs"
+                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    About
+                  </a>
 
+                  <a
+                    href="/GeneralDiary"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    GeneralDiary
+                  </a>
 
-        <nav className='flex items-center flex-wrap bg-black p-3 '>
-            <Link href='/'>
-                <a className='inline-flex items-center p-2 mr-4 '>
-                    <svg
-                        viewBox='0 0 24 24'
-                        xmlns='http://www.w3.org/2000/svg'
-                        className='fill-current text-white h-8 w-8 mr-2'
-                        >
-                        <path d='M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z' />
-                    </svg>
-                    <span className='text-xl text-white font-bold uppercase tracking-wide'>
-                        E- Bureau
-                    </span>
-                </a>
-            </Link>
-            <button className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'  onClick={handleClick}>
-                <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
-                >
-                    <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M4 6h16M4 12h16M4 18h16'
-                    />
-                </svg>
-            </button>
+                  <a
+                    href="/Missing"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Missing Report
+                  </a>
 
-            <div className= {`${active ? 'hidden' : ''}  w-full lg:inline-flex lg:flex-grow lg:w-auto`}>
-                <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
-                    <Link href='/AboutUs'>
-                        <a className=' lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white '>
-                            About Us
-                        </a>
-                    </Link>
-                    <Link href='/GeneralDiary'>
-                        <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white'>
-                            Genral diary
-                        </a>
-                    </Link>
-                    <Link href='/Missing'>
-                        <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white'>
-                            Missing Report
-                        </a>
-                    </Link>
-                    <Link href='/crime'>
-                        <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-space items-center justify-center hover:bg-green-600 hover:text-white'>
-                            Crime Report
-                        </a>
-                    </Link>
+                  <a
+                    href="/crime"
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    Crime Report
+                  </a>
+
+                 
                 </div>
+              </div>
             </div>
-        </nav>
+            {/* <button className="uppercase h-12 text-center w-40 text-white font-Montserrat flex justify-center items-center gap-3 font-semibold rounded bg-blue-500 hover:bg-red-900">
+                <img src="https://www.svgrepo.com/show/303552/google-g-2015-logo.svg" className='w-8'></img>
+                Google
+            </button> */}
+            { showloginButton ?
+                <GoogleLogin
+                    clientId={clientId}
+                    buttonText="Sign In"
+                    onSuccess={onLoginSuccess}
+                    onFailure={onLoginFailure}
+                    cookiePolicy={'single_host_origin'}
+                    isSignedIn={true}
+                /> : null}
+
+            { showlogoutButton ?
+                <GoogleLogout
+                    clientId={clientId}
+                    buttonText="Sign Out"
+                    onLogoutSuccess={onSignoutSuccess}
+                >
+                </GoogleLogout> : null
+            }
+            <div className="-mr-2 flex md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                type="button"
+                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-100 transform"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="transition ease-in duration-75 transform"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          {(ref) => (
+            <div className="md:hidden" id="mobile-menu">
+              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a
+                  href="/AboutUs"
+                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  About
+                </a>
+
+                <a
+                  href="GeneralDiary"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  GeneralDiary
+                </a>
+
+                <a
+                  href="/Missing"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Missing Report
+                </a>
+
+                <a
+                  href="/crime"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  Crime Report
+                </a>
+
+                
+              </div>
+            </div>
+          )}
+        </Transition>
+      </nav>
     </>
   )
 }
