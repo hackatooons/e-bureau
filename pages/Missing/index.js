@@ -2,11 +2,50 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Link from 'next/link'
+import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const generalDiary = () => {
+
+  const [idNo, setidNo] = useState('');
+  const [password, setpassword] = useState('');
+
+  const showAlert = (message) => {
+    toast.error(message, {
+      position: "top-center",
+      autoClose: 2200,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      });
+  }
+
+  const handleOnClick = () => {
+    if (idNo.trim() === '') {
+      showAlert('Identification No. is required')
+    } else if (password.trim() === '') {
+      showAlert('Password field is required')
+    }
+  }
+
   return (
     <>
       <Header />
+      <ToastContainer
+        position="top-center"
+        autoClose={2200}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="font-sans">
         <div className="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100 ">
           <h1 className="text-gray-800 block text-3xl font-extrabold font-title py-4">
@@ -26,6 +65,8 @@ const generalDiary = () => {
                 <div>
                   <input
                     type="email"
+                    value={idNo}
+                    onChange={(e) => setidNo(e.target.value)}
                     placeholder="Enter Unique Identification No."
                     className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
                   />
@@ -34,13 +75,15 @@ const generalDiary = () => {
                 <div className="mt-7">
                   <input
                     type="password"
+                    onChange={(e) => setpassword(e.target.value)}
+                    value={password}
                     placeholder="Enter Name"
                     className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
                   />
                 </div>
 
                 <div className="mt-7">
-                  <button className="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
+                  <button onClick={handleOnClick} className="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105">
                     Login
                   </button>
                 </div>

@@ -4,6 +4,8 @@ import Form from '../../components/Form'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { useRouter } from 'next/router'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Complain = () => {
   const router = useRouter()
@@ -25,16 +27,46 @@ const Complain = () => {
       descr,
     }
 
-    const res = await fetch(`/api/gd/`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-      referrerPolicy: 'no-referrer',
-    })
-    const json = await res.json()
-    router.push(`/ack/${json.data._id}`)
+    const showAlert = (message) => {
+      toast.error(message, {
+        position: "top-center",
+        autoClose: 2200,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    }
+
+    if (name.trim() === '') {
+      showAlert('Name field is required')
+    } else if (age.trim() === '') {
+      showAlert('Age field is required')
+    } else if (isNaN(age.trim())) {
+      showAlert('Age must be a number')
+    } else if (idType.trim() === '') {
+      showAlert('Identification Type is required')
+    } else if (idNumber.trim() === '') {
+      showAlert('Identification No. is required')
+    } else if (place.trim() === '') {
+      showAlert('Place is required')
+    } else if (descr.trim() === '') {
+      showAlert('description is required')
+    } else {
+      const res = await fetch(`/api/gd/`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+        referrerPolicy: 'no-referrer',
+      })
+      const json = await res.json()
+        router.push(`/ack/${json.data._id}`)
+    }
+
+    
   }
   const fields = [
     {
@@ -83,6 +115,17 @@ const Complain = () => {
   return (
     <>
       <Header />
+      <ToastContainer
+        position="top-center"
+        autoClose={2200}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <Form title={title} fields={fields} onsubmit={addReport} />
       <Footer />
     </>
