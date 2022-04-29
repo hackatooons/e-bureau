@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../../asset/css/index.module.css'
-import Header from '../../components/Header/Header'
+import Navbar from '../../components/Navbar/Navbar'
 import { GiTrenchKnife, GiRobberMask } from 'react-icons/gi'
 import Link from 'next/link'
 
@@ -15,7 +15,7 @@ export default function Home() {
         />
       </Head>
       {/* header */}
-      <div className=" flex flex-row items-center p-1 justify-between bg-black shadow-xs">
+      {/* <div className=" flex flex-row items-center p-1 justify-between bg-black shadow-xs">
         <div className="ml-8 text-3xl text-white ">
           <Link href="/">E- Bureau</Link>
         </div>
@@ -34,7 +34,8 @@ export default function Home() {
             </a>
           </Link>
         </div>
-      </div>
+      </div> */}
+      <Navbar />
       {/* header ends */}
 
       <div className="pt-24 bg-green-500">

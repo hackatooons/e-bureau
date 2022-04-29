@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
+import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -34,7 +34,7 @@ const generalDiary = () => {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <ToastContainer
         position="top-center"
         autoClose={2200}
@@ -62,24 +62,38 @@ const generalDiary = () => {
                 POLICE STAFF LOGIN
               </label>
               <form method="#" action="#" className="mt-10">
-                <div>
-                  <input
-                    type="email"
-                    value={idNo}
-                    onChange={(e) => setidNo(e.target.value)}
-                    placeholder="Enter Unique Identification No."
-                    className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                  />
+
+                <div className="mt-4">
+                  <label class="block text-sm font-medium text-gray-700">
+                    Enter Unique Identification No.
+                  </label>
+                  <div class="mt-1 relative rounded-md shadow-sm">
+                    <input
+                      type="email"
+                      value={idNo}
+                      onChange={(e) => setidNo(e.target.value)}
+                      class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                      placeholder="Enter Unique Identification No."
+                    />
+                  </div>
+                  {/* <strong class="text-red-500 text-xs">Unique Identification No field is required</strong> */}
                 </div>
 
-                <div className="mt-7">
-                  <input
-                    type="password"
-                    onChange={(e) => setpassword(e.target.value)}
-                    value={password}
-                    placeholder="Enter Name"
-                    className="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
-                  />
+                <div className="mt-4">
+                  <label class="block text-sm font-medium text-gray-700">
+                    Enter Name
+                  </label>
+                  <div class="mt-1 relative rounded-md shadow-sm">
+                    <input
+                      type="password"
+                       onChange={(e) => setpassword(e.target.value)}
+                       value={password}
+                      class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                      placeholder="Enter Name"
+                    />
+                  </div>
+                  {/* <strong class="text-red-500 text-xs">Name field is required</strong> */}
+
                 </div>
 
                 <div className="mt-7">

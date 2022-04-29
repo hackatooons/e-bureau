@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Form from '../../components/Form'
-import Header from '../../components/Header/Header'
+import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import { useRouter } from 'next/router'
 import { ToastContainer, toast } from 'react-toastify'
@@ -114,7 +114,7 @@ const Complain = () => {
   ]
   return (
     <>
-      <Header />
+      <Navbar />
       <ToastContainer
         position="top-center"
         autoClose={2200}

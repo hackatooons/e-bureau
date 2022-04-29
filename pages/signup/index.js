@@ -1,32 +1,52 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import { handleSignup } from '../../asset/js/handleSignup'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import bcrypt from 'bcryptjs'
+import { useFormik, Form, FormikProvider } from 'formik'
+import * as Yup from 'yup'
 
 export default function index() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [hasSentOTP, setHasSentOTP] = useState(false)
   const [otp, setOTP] = useState('')
-  const [state, setState] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    otp: '',
+
+  const SignUpSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Fullname is too Short!')
+      .max(50, 'Fullname is too Long!')
+      .required('Fullname is required'),
+    email: Yup.string()
+      .email('Email must be a valid email address')
+      .required('Email is required'),
+    password: Yup.string()
+      .min(6, 'Password must be at least 6 characters')
+      .max(30, 'Password is too Long!')
+      .required('Password is required'),
+    confirmPassword: Yup.string().oneOf(
+      [Yup.ref('password'), null],
+      'Passwords must match'
+    ),
   })
-  const handleOnChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-  const handleSignupClick = async (e) => {
-    e.preventDefault()
-    setLoading((prev) => true)
-    await handleSignup(state, setState, setHasSentOTP)
-    setLoading((prev) => false)
-  }
+
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+    },
+    validationSchema: SignUpSchema,
+    onSubmit: async () => {
+      setLoading((prev) => true)
+      await handleSignup(values, setHasSentOTP)
+      setLoading((prev) => false)
+    },
+  })
+
   const handleVerifyClick = async (e) => {
     e.preventDefault()
     if (!otp) {
@@ -56,6 +76,8 @@ export default function index() {
     }
     router.replace('/')
   }
+
+  const { errors, touched, values, handleSubmit, getFieldProps } = formik
 
   return (
     <>
@@ -90,8 +112,9 @@ export default function index() {
                   </div>
                   <div className="mt-7">
                     <button
-                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${loading ? 'opacity-50 cursor-not-allowed' : ''
-                        } `}
+                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${
+                        loading ? 'opacity-50 cursor-not-allowed' : ''
+                      } `}
                       onClick={handleVerifyClick}
                       disabled={loading}
                     >
@@ -100,46 +123,106 @@ export default function index() {
                   </div>
                 </form>
               ) : (
-                <form method="#" action="#" className="mt-10">
-                  <div className='mt-4'>
-                    <label for="price" class="block text-sm font-medium text-gray-700">Full Name</label>
-                    <div class="mt-1 relative rounded-md shadow-sm">
-                      <input type="text" name="name" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Full Name" onChange={handleOnChange}/>
+                <FormikProvider value={formik}>
+                  <Form
+                    className="mt-10"
+                    autoComplete="off"
+                    noValidate
+                    onSubmit={handleSubmit}
+                  >
+                    <div className="mt-4">
+                      <label
+                        for="price"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Full Name
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input
+                          type="text"
+                          name="name"
+                          class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                          placeholder="Enter Full Name"
+                          {...getFieldProps('name')}
+                        />
+                      </div>
+                      <strong class="text-red-500 text-xs">
+                        {touched.name && errors.name}
+                      </strong>
                     </div>
-                    {/* <strong class="text-red-500 text-xs">Full Name field is required</strong> */}
-                  </div>
-                  <div className='mt-4'>
-                    <label for="price" class="block text-sm font-medium text-gray-700">Email Address</label>
-                    <div class="mt-1 relative rounded-md shadow-sm">
-                      <input type="email" name="email" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Email" onChange={handleOnChange}/>
+                    <div className="mt-4">
+                      <label
+                        for="price"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Email Address
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input
+                          type="email"
+                          name="email"
+                          class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                          placeholder="Enter Email"
+                          {...getFieldProps('email')}
+                        />
+                      </div>
+                      <strong class="text-red-500 text-xs">
+                        {touched.email && errors.email}
+                      </strong>
                     </div>
-                    {/* <strong class="text-red-500 text-xs">Email field is required</strong> */}
-                  </div>
-                  <div className='mt-4'>
-                    <label for="price" class="block text-sm font-medium text-gray-700">Password</label>
-                    <div class="mt-1 relative rounded-md shadow-sm">
-                      <input type="password" name="password" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Enter Password" onChange={handleOnChange}/>
+                    <div className="mt-4">
+                      <label
+                        for="price"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Password
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input
+                          type="password"
+                          name="password"
+                          class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                          placeholder="Enter Password"
+                          {...getFieldProps('password')}
+                        />
+                      </div>
+                      <strong class="text-red-500 text-xs">
+                        {touched.password && errors.password}
+                      </strong>
                     </div>
-                    {/* <strong class="text-red-500 text-xs">Password field is required</strong> */}
-                  </div>
-                  <div className='mt-4'>
-                    <label for="price" class="block text-sm font-medium text-gray-700">Confirm Password</label>
-                    <div class="mt-1 relative rounded-md shadow-sm">
-                      <input type="text" name="confirmPassword" class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md" placeholder="Re-Enter Password" onChange={handleOnChange}/>
+                    <div className="mt-4">
+                      <label
+                        for="price"
+                        class="block text-sm font-medium text-gray-700"
+                      >
+                        Confirm Password
+                      </label>
+                      <div class="mt-1 relative rounded-md shadow-sm">
+                        <input
+                          type="text"
+                          name="confirmPassword"
+                          class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
+                          placeholder="Re-Enter Password"
+                          {...getFieldProps('confirmPassword')}
+                        />
+                      </div>
+                      <strong class="text-red-500 text-xs">
+                        {touched.confirmPassword && errors.confirmPassword}
+                      </strong>
                     </div>
-                    {/* <strong class="text-red-500 text-xs">Please Re-Enter Password</strong> */}
-                  </div>
-                  <div className="mt-7">
-                    <button
-                      className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${loading ? 'opacity-50 cursor-not-allowed' : ''
+                    <div className="mt-7">
+                      <button
+                        className={`bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out  transform hover:-translate-x hover:scale-105 ${
+                          loading ? 'opacity-50 cursor-not-allowed' : ''
                         } `}
-                      onClick={handleSignupClick}
-                      disabled={loading}
-                    >
-                      Signup
-                    </button>
-                  </div>
-                </form>
+                        type="submit"
+                        disabled={loading}
+                      >
+                        Signup
+                      </button>
+                    </div>
+                  </Form>
+                </FormikProvider>
               )}
               {hasSentOTP ? (
                 ''

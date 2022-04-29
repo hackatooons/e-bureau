@@ -7,7 +7,7 @@ import Services from "../components/Servies/Services"
 function page() {
   return (
     
-<>
+<div>
   <Navbar />
     <div className={styles.outerdiv}>
    
@@ -35,7 +35,7 @@ function page() {
 
 
     </div>
-    </>
+    </div>
   )
 }
 export default page;
