@@ -199,7 +199,7 @@ export default function index() {
                       </label>
                       <div class="mt-1 relative rounded-md shadow-sm">
                         <input
-                          type="text"
+                          type="password"
                           name="confirmPassword"
                           class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
                           placeholder="Re-Enter Password"

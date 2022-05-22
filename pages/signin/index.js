@@ -1,10 +1,19 @@
 import React from 'react'
 import { useFormik, Form, FormikProvider } from 'formik'
 import * as Yup from 'yup'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+const eye = <FontAwesomeIcon icon={faEye} />;
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
 export default function index() {
+  const [cls, setCls] = React.useState("black");
+  const [passwordShown, setPasswordShown] = React.useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+    setCls((cls) => (cls === "red" ? "black" : "red"));
+  };
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
       .email('Email must be a valid email address')
@@ -28,6 +37,10 @@ export default function index() {
 
   return (
     <>
+    <style>{`
+        .red {color: red}
+        .black {color: black}
+      `}</style>
       <Header />
       <div className="font-sans">
         <div className="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100">
@@ -69,12 +82,13 @@ export default function index() {
                     </label>
                     <div class="mt-1 relative rounded-md shadow-sm">
                       <input
-                        type="password"
+                        type={passwordShown ? "text" : "password"}
                         name="password"
                         class="focus:ring-blue-500 focus:border-blue-500 block w-full p-3 sm:text-sm border-gray-300 rounded-md"
                         placeholder="Enter Strong Password"
                         {...getFieldProps('password')}
                       />
+                      <button type="button" className={cls} style={{position: 'absolute',right: 7,top: 10,}} onClick={togglePassword}>{eye}</button>{" "}
                     </div>
                     <strong class="text-red-500 text-xs">
                       {touched.password && errors.password}
@@ -96,7 +110,7 @@ export default function index() {
                       alignItems: 'center',
                     }}
                   >
-                    Not registered yet? Register&nbsp;<a href="#"> here </a>{' '}
+                    Not registered yet? Register&nbsp;<a href="#"><b>here </b> </a>{' '}
                   </div>
                 </Form>
               </FormikProvider>
