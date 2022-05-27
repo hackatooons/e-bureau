@@ -25,14 +25,6 @@ It provides an environment for all the citizens to get their problems solved. Al
 <br>
 <br>
   
-### Open Source Program it has been part of ✨
-<p align="center">
-<img src="https://media-exp1.licdn.com/dms/image/C560BAQGh8hr-FgbrHw/company-logo_200_200/0/1602422883512?e=1654128000&v=beta&t=cn4L1Ij4226o67c9ZOxKfExdyzjxgRdiC4CUE5nSKEI" width=100 height=100>
-<img src="https://media-exp1.licdn.com/dms/image/C510BAQGSObrO0QPlMQ/company-logo_200_200/0/1555704980721?e=1654128000&v=beta&t=RMDFKpN0LKke3gQYwa_yJGs9LqjS0GXKvj2wQEBTfV8" width=100 height=100>
-</p>
-
-
-
 ## Installation
 
 Install my-project with npm
