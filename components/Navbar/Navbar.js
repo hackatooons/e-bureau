@@ -46,8 +46,8 @@ const Navbar = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex justify-center items-center gap-2">
                 <img
-                  className="h-8 w-8"
-                  src="https://www.svgrepo.com/show/16950/building.svg"
+                  className="h-12 w-12"
+                  src="https://www.svgrepo.com/show/29085/police-officer.svg"
                   alt="Workflow"
                 />
                 <h1 className='text-white text-3xl font-Montserrat font-bold'>E-Bureau</h1>
