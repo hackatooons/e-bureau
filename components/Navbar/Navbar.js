@@ -50,7 +50,9 @@ const Navbar = () => {
                   src="https://www.svgrepo.com/show/29085/police-officer.svg"
                   alt="Workflow"
                 />
-                <h1 className='text-white text-3xl font-Montserrat font-bold'>E-Bureau</h1>
+                <Link href="/">
+                    <a className="text-white text-3xl font-Montserrat font-bold">E-Bureau</a>
+                </Link>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
