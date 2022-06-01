@@ -6,205 +6,38 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Footer = () => {
+  let iconStyles = { color: "black", fontSize: "1.5em" };
   return (
     <>
 
- {/* OLD FOOTER START */}
-
-
-      {/* <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
-      />
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-        rel="stylesheet"
-      />
-      <footer className="relative  pt-8 pb-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap text-left lg:text-left">
-            <div className="w-full lg:w-6/12 px-4">
-              <h4 className="text-3xl fonat-semibold text-white">
-                Let's us together bring change!
-              </h4>
-              <h5 className="text-lg mt-0 mb-2 text-white">
-                File complain, track using tracking Id. Then sit back and relax,
-                let the police Officers solve the problem.
-              </h5>
-              <div className="mt-6 lg:mb-0 mb-6">
-                <button
-                  className="text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <IoLogoTwitter size="1x" style={{ color: '#58A7DC' }} />
-                </button>
-                <button
-                  className="text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <FaFacebook size="1x" style={{ color: '#1877F2' }} />
-                </button>
-                <button
-                  className="text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                  type="button"
-                >
-                  <FaGithub size="1x" />
-                </button>
-              </div>
-            </div>
-            <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
-                  <span className="block uppercase text-white text-sm font-semibold mb-2">
-                    Useful Links
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href=""
-                      >
-                        About Us
-                      </a>
-                    </li>
-                    <Link href="/GeneralDiary">
-                      <li>
-                        <a
-                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                          href=""
-                        >
-                          General Diary
-                        </a>
-                      </li>
-                    </Link>
-                    <Link href="/Missing">
-                      <li>
-                        <a
-                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                          href=""
-                        >
-                          Missing Report
-                        </a>
-                      </li>
-                    </Link>
-                    <Link href="/crime">
-                      <li>
-                        <a
-                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                          href=""
-                        >
-                          Crime Report
-                        </a>
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-white text-sm font-semibold mb-2">
-                    Other Links
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a
-                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href=""
-                      >
-                        License
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href=""
-                      >
-                        Terms &amp; Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                        href=""
-                      >
-                        Privacy Policy
-                      </a>
-                    </li>
-                    <Link href="/contactUs">
-                      <li>
-                        <a
-                          className="text-white hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                          href=""
-                        >
-                          Contact Us
-                        </a>
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr className="my-6 border-blueGray-300" />
-          <div className="flex flex-wrap items-center md:justify-between justify-center">
-            <div className="w-full md:w-4/12 px-4 mx-auto text-center">
-              <div className="text-sm text-white font-semibold py-1">
-                Copyright © <span id="get-current-year">2021</span>
-                <a
-                  href=""
-                  className="text-white hover:text-gray-800"
-                  target="_blank"
-                />{' '}
-                all rights
-                <a
-                  href=""
-                  className="text-white hover:text-blueGray-800"
-                >
-                  {' '}
-                  reserved
-                </a>
-                .
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer> */}
-
-      {/* OLD FOOTER END  */}
-
-      {/* NEW FOOTER START */}
-
-      <footer className="text-center lg:text-left bg-gray-100 text-gray-600">
-            <div className="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
-                  <div className="mr-12 hidden lg:block">
-                    <span>Get connected with us on social networks:</span>
+      <footer className="text-center lg:text-left bg-gray-100 text-black-100 border-2 border-green-900">
+            <div className="flex justify-center items-center lg:justify-between p-4 border-b border-green-900">
+                  <div className="mr-12 hidden lg:block font-semibold">
+                    <span>Get connected with us on social networks :</span>
                   </div>
               <div className="flex justify-center">
 
-                  <a href="#!" className="mr-6 text-gray-600">
-                    <InstagramIcon />
+                  <a href="https://www.instagram.com/?hl=en" className="mr-6 text-black-600">
+                    <InstagramIcon style={iconStyles} />                    
                   </a>
 
-                  <a href="#!" className="mr-6 text-gray-600">
-                      <FacebookIcon />
+                  <a href="https://www.facebook.com/" className="mr-6 text-black-600">
+                      <FacebookIcon style={iconStyles} />
                   </a>
 
-                  <a href="#!" className="mr-6 text-gray-600">
-                    <GitHubIcon />
+                  <a href="https://github.com/" className="mr-6 text-black-600">
+                    <GitHubIcon style={iconStyles} />
                   </a>
 
-                  <a href="#!" className="mr-6 text-gray-600">
-                    <TwitterIcon />
+                  <a href="https://twitter.com/" className="mr-6 text-black-600">
+                    <TwitterIcon style={iconStyles} />
                   </a>
 
-                  
               </div>
             </div>
 
-          <div className=" mx-14 py-10 text-center md:text-left">
-            <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-4 gap-24">
+          <div className=" mx-14 py-4 text-center md:text-left">
+            <div className="grid grid-1 md:grid-cols-3 lg:grid-cols-3 gap-28">
               <div className="">
                 <h6 className="
                     uppercase
@@ -214,7 +47,7 @@ const Footer = () => {
                     items-center
                     justify-center
                     md:justify-start
-                  ">
+                  " style={{fontSize:"25px"}}>
                   <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cubes"
                     className="w-4 mr-3" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512">
@@ -226,67 +59,69 @@ const Footer = () => {
                 </h6>
                 <p className=''>
                   Let us together bring the Change <br></br>
-                  File the report, then Sit back and relax, Let Cops do their work for you
+                  File the report, then Sit back and relax, Let Cops do their work for you.<br></br>
+                  Creating an environment in which all residents may have their problems handled.
                 </p>
               </div>
               <div className="">
-                <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                <h6 className="uppercase font-semibold mb-2 flex justify-center md:justify-start" style={{fontSize:"17px"}}>
                   MORE
                 </h6>
-                <p className="mb-4">
+                <p className="mb-2">
                   <Link href="/">
-                    <a className="text-gray-600">License</a>
+                    <a className="text-black-100">License</a>
                   </Link>
                 </p>
-                <p className="mb-4">
+                <p className="mb-2">
                   <Link href="/">
-                    <a className="text-gray-600">Terms & Conditions</a>
+                    <a className="text-black-100">Terms & Conditions</a>
                   </Link>
                 </p>
-                <p className="mb-4">
+                <p className="mb-2">
                   <Link href="/">
-                    <a className="text-gray-600">Privacy Policy</a>
+                    <a className="text-black-100">Privacy Policy</a>
                   </Link>
                 </p>
                 <p>
                   <Link href="/contactUs">
-                    <a className="text-gray-600">ContactUs</a>
+                    <a className="text-black-100">ContactUs</a>
                   </Link>
                 </p>
               </div>
               <div className="">
-                <h6 className="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                <h6 className="uppercase font-semibold mb-2 flex justify-center md:justify-start" style={{fontSize:"17px"}}>
                   Useful links
                 </h6>
-                <p className="mb-4">
+                <p className="mb-2">
                   <Link href="/AboutUs">
-                    <a className="text-gray-600">About US</a>
+                    <a className="text-black-100">About US</a>
                     </Link>
                 </p>
-                <p className="mb-4">
+                <p className="mb-2">
                   <Link href="/GeneralDiary">
-                    <a className="text-gray-600">General Diary</a>
+                    <a className="text-black-100">General Diary</a>
                   </Link>
                 </p>
-                <p className="mb-4">
+                <p className="mb-2">
                   <Link href="/Missing">
-                    <a className="text-gray-600">Missing Report</a>
+                    <a className="text-black-100">Missing Report</a>
                   </Link>
                 </p>
                 <p>
                   <Link href="/crime">
-                    <a className="text-gray-600">Crime Report</a>
+                    <a className="text-black-100">Crime Report</a>
                   </Link>
                 </p>
               </div>
               
             </div>
           </div>
-          <div className="text-center p-6 bg-gray-200">
+          <div className="text-center p-4 bg-white-900">
             <span>© 2022 Copyright :</span>
             <Link href="/">
-              <a className="text-gray-600 font-semibold ml-1">E-Bureau</a>
+              <a className="text-blue-700 font-bold ml-1">E-Bureau</a>
             </Link>
+            <span> | All Rights Reserved</span>
           </div>
       </footer>
     </>
