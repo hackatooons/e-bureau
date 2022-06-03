@@ -11,7 +11,7 @@ const Services = () => {
       <div className='grid md:grid-cols-6 lg:grid-cols-3 gap-4 my-12'>
 
             <div class="max-w-sm bg-white rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="https://user-images.githubusercontent.com/70858557/134803954-9832e9f7-4183-4405-9c76-cbac80ee5b5b.jpg" alt="Sunset in the mountains"/>
+              <img class="w-full" style={{width:"350" , height:"263px"}} src="https://img.etimg.com/thumb/msid-87832741,width-1200,height-900/news/india/sc-directs-testing-of-mobile-app-for-videography/photography-of-crime-scene-by-experts.jpg" alt="Sunset in the mountains"/>
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base font-space font-medium">
@@ -28,7 +28,7 @@ const Services = () => {
             </div>
 
             <div class="max-w-sm bg-white rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="https://user-images.githubusercontent.com/70858557/134803954-9832e9f7-4183-4405-9c76-cbac80ee5b5b.jpg" alt="Sunset in the mountains"/>
+              <img class="w-full" style={{width:"350" , height:"263px"}}  src="https://user-images.githubusercontent.com/70858557/134803954-9832e9f7-4183-4405-9c76-cbac80ee5b5b.jpg" alt="Sunset in the mountains"/>
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base font-space font-medium">
@@ -45,7 +45,7 @@ const Services = () => {
             </div>
 
             <div class="max-w-sm bg-white rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="https://user-images.githubusercontent.com/70858557/134804846-0a3acae0-2dd8-401f-a526-d308083a5726.jpg"  alt="Sunset in the mountains"/>
+              <img class="w-full" style={{width:"350" , height:"263px"}}  src="https://user-images.githubusercontent.com/70858557/134804846-0a3acae0-2dd8-401f-a526-d308083a5726.jpg"  alt="Sunset in the mountains"/>
               <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
                 <p class="text-gray-700 text-base font-space font-medium">
